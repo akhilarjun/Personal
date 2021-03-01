@@ -98,7 +98,7 @@ body .loader .water:after {
 body .wrapper {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 100px 0 50px;
+  padding: 100px 50px;
 }
 
 body .wrapper .banner {
@@ -118,16 +118,21 @@ body .wrapper .gallery {
   margin-top: 30px;
 }
 
-body .wrapper .gallery zen-for {
-  display: -ms-grid;
-  display: grid;
-  gap: 5px;
-  -ms-grid-columns: (minmax(30%, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  grid-auto-rows: 5px;
-}
-
 body .wrapper .gallery zen-for img {
   width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    padding: 0px;
+  }
+  zen-for {
+    display: -ms-grid;
+    display: grid;
+    gap: 5px;
+    -ms-grid-columns: (minmax(30%, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-auto-rows: 10px;
+  }
 }
 /*# sourceMappingURL=ishak.css.map */

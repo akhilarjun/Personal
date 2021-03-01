@@ -44,6 +44,7 @@ const getImgs = () => {
     }
 
     zenFor.elem.renderContent().then(() => {
+      firstload = !firstload;
       setTimeout(() => {
         paintMosaic();
       }, 200);
