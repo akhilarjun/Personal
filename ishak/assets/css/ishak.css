@@ -1,0 +1,133 @@
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #212321;
+  position: relative;
+}
+
+body .loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .loader.hide {
+  display: none;
+}
+
+body .loader .holder {
+  margin: auto;
+  color: #fff;
+}
+
+body .loader .water {
+  width: 50px;
+  height: 50px;
+  background-color: #3cd;
+  border-radius: 50%;
+  position: relative;
+  -webkit-box-shadow: inset 0 0 30px 0 rgba(0, 0, 0, 0.5), 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 30px 0 rgba(0, 0, 0, 0.5), 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  margin: auto;
+}
+
+body .loader .water:before,
+body .loader .water:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -13.9px;
+  background-color: #fff;
+}
+
+body .loader .water:before {
+  border-radius: 45%;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-animation: wave 5s linear infinite;
+          animation: wave 5s linear infinite;
+}
+
+body .loader .water:after {
+  border-radius: 35%;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-animation: wave 5s linear infinite;
+          animation: wave 5s linear infinite;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+body .wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 0 50px;
+}
+
+body .wrapper .banner {
+  font-size: 50px;
+  font-weight: 800;
+  color: #eee;
+  text-align: center;
+}
+
+body .wrapper .banner .helper {
+  font-size: 18px;
+  margin-top: -10px;
+  letter-spacing: 3px;
+}
+
+body .wrapper .gallery {
+  margin-top: 30px;
+}
+
+body .wrapper .gallery zen-for {
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+  -ms-grid-columns: (minmax(30%, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-auto-rows: 5px;
+}
+
+body .wrapper .gallery zen-for img {
+  width: 100%;
+}
+/*# sourceMappingURL=ishak.css.map */

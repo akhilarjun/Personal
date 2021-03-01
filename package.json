@@ -1,0 +1,28 @@
+{
+  "name": "personal",
+  "version": "1.0.0",
+  "description": "Personal Worksapce",
+  "main": "index.js",
+  "scripts": {
+    "ishak": "node scripts/setup-ishak"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhilarjun/personal.git"
+  },
+  "author": "Akhil Arjun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akhilarjun/personal/issues"
+  },
+  "homepage": "https://github.com/akhilarjun/personal#readme",
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "compress-images": "^1.9.8",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "imagemin": "^7.0.1",
+    "imagemin-webp": "^6.0.0"
+  }
+}
