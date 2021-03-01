@@ -29,6 +29,9 @@ const paintMosaic = () => {
       item.style.gridRowEnd = "span " + rowSpan;
     });
     document.querySelector(".loader").classList.add("hide");
+    setTimeout(() => {
+      document.querySelector(".banner").classList.add("start");
+    }, 1500);
   }
 };
 

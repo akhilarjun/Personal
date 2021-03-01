@@ -14,6 +14,10 @@ body {
   background-color: #212321;
   position: relative;
 
+  .spcl {
+    color: tomato;
+  }
+
   .loader {
     position: fixed;
     top: 0;
@@ -59,14 +63,6 @@ body {
       background: rgba(255, 255, 255, 0.3);
       animation: wave 5s linear infinite;
     }
-    @keyframes wave {
-      0% {
-        transform: rotate(0);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
   }
 
   .wrapper {
@@ -75,15 +71,18 @@ body {
     padding: 100px 50px;
 
     .banner {
-      font-size: 50px;
       font-weight: 800;
       color: #eee;
       text-align: center;
 
+      .reveal-names {
+        font-size: 30px;
+      }
+
       .helper {
         font-size: 18px;
-        margin-top: -10px;
         letter-spacing: 3px;
+        opacity: 0;
       }
     }
 
@@ -108,5 +107,90 @@ body {
     gap: 5px;
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     grid-auto-rows: 10px;
+  }
+}
+
+.start {
+  .scale-out {
+    display: inline-block;
+    animation: scaleout 500ms linear forwards;
+  }
+  .move-right {
+    display: inline-block;
+    animation: moveright 500ms linear forwards;
+  }
+  .move-left {
+    display: inline-block;
+    animation: moveleft 500ms linear forwards;
+  }
+  .fade-out {
+    display: inline-block;
+    animation: fadeout 500ms linear forwards;
+  }
+  .fade-in {
+    display: inline-block;
+    animation: fadein 1s linear forwards;
+    animation-delay: 2s;
+  }
+  .zoom-up {
+    animation: zoomup 500ms linear forwards;
+    animation-delay: 600ms;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scaleout {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes moveright {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(45px);
+  }
+}
+
+@keyframes moveleft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomup {
+  to {
+    transform: scale(1.6);
   }
 }

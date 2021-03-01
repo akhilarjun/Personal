@@ -16,6 +16,10 @@ body {
   position: relative;
 }
 
+body .spcl {
+  color: tomato;
+}
+
 body .loader {
   position: fixed;
   top: 0;
@@ -73,6 +77,89 @@ body .loader .water:after {
           animation: wave 5s linear infinite;
 }
 
+body .wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 50px;
+}
+
+body .wrapper .banner {
+  font-weight: 800;
+  color: #eee;
+  text-align: center;
+}
+
+body .wrapper .banner .reveal-names {
+  font-size: 30px;
+}
+
+body .wrapper .banner .helper {
+  font-size: 18px;
+  letter-spacing: 3px;
+  opacity: 0;
+}
+
+body .wrapper .gallery {
+  margin-top: 30px;
+}
+
+body .wrapper .gallery zen-for img {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    padding: 0px;
+  }
+  zen-for {
+    display: -ms-grid;
+    display: grid;
+    gap: 5px;
+    -ms-grid-columns: (minmax(30%, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-auto-rows: 10px;
+  }
+}
+
+.start .scale-out {
+  display: inline-block;
+  -webkit-animation: scaleout 500ms linear forwards;
+          animation: scaleout 500ms linear forwards;
+}
+
+.start .move-right {
+  display: inline-block;
+  -webkit-animation: moveright 500ms linear forwards;
+          animation: moveright 500ms linear forwards;
+}
+
+.start .move-left {
+  display: inline-block;
+  -webkit-animation: moveleft 500ms linear forwards;
+          animation: moveleft 500ms linear forwards;
+}
+
+.start .fade-out {
+  display: inline-block;
+  -webkit-animation: fadeout 500ms linear forwards;
+          animation: fadeout 500ms linear forwards;
+}
+
+.start .fade-in {
+  display: inline-block;
+  -webkit-animation: fadein 1s linear forwards;
+          animation: fadein 1s linear forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.start .zoom-up {
+  -webkit-animation: zoomup 500ms linear forwards;
+          animation: zoomup 500ms linear forwards;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
 @-webkit-keyframes wave {
   0% {
     -webkit-transform: rotate(0);
@@ -95,44 +182,113 @@ body .loader .water:after {
   }
 }
 
-body .wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 100px 50px;
-}
-
-body .wrapper .banner {
-  font-size: 50px;
-  font-weight: 800;
-  color: #eee;
-  text-align: center;
-}
-
-body .wrapper .banner .helper {
-  font-size: 18px;
-  margin-top: -10px;
-  letter-spacing: 3px;
-}
-
-body .wrapper .gallery {
-  margin-top: 30px;
-}
-
-body .wrapper .gallery zen-for img {
-  width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .wrapper {
-    padding: 0px;
+@-webkit-keyframes scaleout {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
-  zen-for {
-    display: -ms-grid;
-    display: grid;
-    gap: 5px;
-    -ms-grid-columns: (minmax(30%, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-    grid-auto-rows: 10px;
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes scaleout {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes moveright {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(45px);
+            transform: translateX(45px);
+  }
+}
+
+@keyframes moveright {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(45px);
+            transform: translateX(45px);
+  }
+}
+
+@-webkit-keyframes moveleft {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+}
+
+@keyframes moveleft {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+}
+
+@-webkit-keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes zoomup {
+  to {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+  }
+}
+
+@keyframes zoomup {
+  to {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
   }
 }
 /*# sourceMappingURL=ishak.css.map */
